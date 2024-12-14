@@ -1,0 +1,30 @@
+Backend
+Task Model:
+
+Attributes: done
+title (string, required, max length 50 characters)
+description (text, optional)
+due_date (datetime, optional)
+completed (boolean, default: false)
+timestamps
+Validations:
+
+done
+title must be present and have a maximum length of 50 characters.
+Controllers:
+
+done
+TasksController with the following actions:
+index: Display all tasks, grouped into Incomplete and Completed lists.
+new & create: Create new tasks.
+edit & update: Edit existing tasks.
+destroy: Delete tasks.
+toggle_complete: Toggle a task's completed status.
+Routes:
+
+done
+Resourceful routing for tasks.
+Custom member route for toggle_complete.
+Root route set to tasks#index.
+Custom route for completed_tasks.
+Custom route for incomplete_tasks.
